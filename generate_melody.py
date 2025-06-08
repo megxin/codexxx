@@ -33,11 +33,9 @@ def generate_tone(frequency, duration):
     amplitude = 32767 // 2
     samples = []
     for i in range(num_samples):
-        # Compute sine wave sample
         sample = amplitude * math.sin(2 * math.pi * frequency * (i / SAMPLE_RATE))
         samples.append(int(sample))
     return samples
-
 
 def main(filename="kaeru_no_uta.wav"):
     all_samples = []
